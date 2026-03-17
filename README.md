@@ -267,7 +267,7 @@ The treatment column is simulated using domain logic, not from a randomized cont
 | Deliverable | Location | Audience |
 |-------------|----------|----------|
 | 6 Jupyter notebooks | `notebooks/` | Data science team |
-| Streamlit dashboard | `dashboard/` + [live link](https://portfolio-risk-uplift-modeling-osdhzfzrwwthbjg3sgmrx4.streamlit.app/) | Collections manager |
+| Streamlit dashboard | `dashboard/` + [live link](https://portfolio-risk-uplift-modelingosdhzfzrwwthbjg3sgmrx4.streamlit.app/) | Collections manager |
 | Collections Strategy Playbook | `report/` | Non-technical stakeholders |
 | Dockerized deployment | `dashboard/Dockerfile` | Engineering team |
 | Processed datasets | `data/processed/` | Downstream analysis |
