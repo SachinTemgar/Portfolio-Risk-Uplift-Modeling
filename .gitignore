@@ -19,3 +19,5 @@ venv/
 # OS
 .DS_Store
 Thumbs.db
+
+# Allow processed data for dashboard
