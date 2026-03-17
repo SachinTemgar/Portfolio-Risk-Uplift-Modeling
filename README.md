@@ -278,8 +278,6 @@ The treatment column is simulated using domain logic, not from a randomized cont
 
 **Sachin Temgar**
 
-[GitHub](https://github.com/SachinTemgar) &nbsp;&bull;&nbsp; [LinkedIn](www.linkedin.com/in/sachin-temgar
-
-)
+[GitHub](https://github.com/SachinTemgar) &nbsp;&bull;&nbsp; [LinkedIn](https://www.linkedin.com/in/sachin-temgar)
 
 ---
