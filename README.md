@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://portfolio-risk-uplift-modeling.streamlit.app">Live Dashboard</a> &nbsp;&bull;&nbsp;
+  <a href="https://portfolio-risk-uplift-modeling-osdhzfzrwwthbjg3sgmrx4.streamlit.app/">Live Dashboard</a> &nbsp;&bull;&nbsp;
   <a href="#results">Results</a> &nbsp;&bull;&nbsp;
   <a href="#methodology">Methodology</a> &nbsp;&bull;&nbsp;
   <a href="#interactive-dashboard">Dashboard</a> &nbsp;&bull;&nbsp;
@@ -169,7 +169,7 @@ Staged deployment plan: 5% canary (weeks 1-2), 20% validation (month 1), 100% fu
 
 The Streamlit dashboard provides real-time scenario modeling for collections managers.
 
-**[Open Live Dashboard](https://portfolio-risk-uplift-modeling.streamlit.app)**
+**[Open Live Dashboard](https://portfolio-risk-uplift-modeling-osdhzfzrwwthbjg3sgmrx4.streamlit.app/)**
 
 **Features:**
 - ROI simulator with adjustable cost per outreach, team capacity, and resource limits
