@@ -155,9 +155,14 @@ CHART_LAYOUT = dict(
     margin=dict(l=50, r=30, t=50, b=40)
 )
 
+import pathlib
+
+APP_DIR = pathlib.Path(__file__).parent
+DATA_PATH = APP_DIR / '..' / 'data' / 'processed' / 'segmented_scores.csv'
+
 @st.cache_data
 def load_data():
-    return pd.read_csv('../data/processed/segmented_scores.csv')
+    return pd.read_csv(DATA_PATH)
 
 df = load_data()
 LGD = 0.45
