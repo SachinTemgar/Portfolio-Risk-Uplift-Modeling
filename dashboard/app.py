@@ -155,13 +155,17 @@ CHART_LAYOUT = dict(
     margin=dict(l=50, r=30, t=50, b=40)
 )
 
+import os
 import pathlib
 
-APP_DIR = pathlib.Path(__file__).parent
-DATA_PATH = APP_DIR / '..' / 'data' / 'processed' / 'segmented_scores.csv'
+ROOT_DIR = pathlib.Path(__file__).parent.parent.resolve()
+DATA_PATH = ROOT_DIR / 'data' / 'processed' / 'segmented_scores.csv'
 
 @st.cache_data
 def load_data():
+    if not DATA_PATH.exists():
+        st.error(f"Data file not found at: {DATA_PATH}")
+        st.stop()
     return pd.read_csv(DATA_PATH)
 
 df = load_data()
@@ -440,17 +444,14 @@ col_quad, col_seg = st.columns([1.2, 0.8])
 with col_quad:
     color_map = {'Target Group': BLUE, 'Will Recover': CADET, 'Do Not Contact': RED}
 
-    sample = filtered.groupby('quadrant_label').apply(
-        lambda x: x.sample(min(2000, len(x)), random_state=42)
-    ).reset_index(drop=True)
-
     fig_quad = go.Figure()
     for quad, color in color_map.items():
-        mask = sample['quadrant_label'] == quad
-        if mask.sum() > 0:
+        subset = filtered[filtered['quadrant_label'] == quad]
+        if len(subset) > 0:
+            sample = subset.sample(min(2000, len(subset)), random_state=42)
             fig_quad.add_trace(go.Scatter(
-                x=sample[mask][active_model_col],
-                y=sample[mask]['baseline_risk'],
+                x=sample[active_model_col],
+                y=sample['baseline_risk'],
                 mode='markers', name=quad,
                 marker=dict(color=color, size=5, opacity=0.4, line=dict(width=0))
             ))
